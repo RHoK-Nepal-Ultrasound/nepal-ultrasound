@@ -1,0 +1,16 @@
+div(id='person-#{person.id}').person
+   table
+      tr
+         td
+            a(href='#', id='respond-#{person.id}').respond respond   
+         td
+            a(href='/image/#{person.id}').lightbox
+               img(src='/thumb/#{person.id}')
+         td
+            h2.name= person.name
+            h3.age
+             | #{person.age}
+             | years old
+            h3.created    
+             | #{person.created}
+

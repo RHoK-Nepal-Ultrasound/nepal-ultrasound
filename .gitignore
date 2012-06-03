@@ -1,0 +1,4 @@
+node_modules/
+.sw[p-z]
+.tmp
+.DS_Store

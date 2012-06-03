@@ -1,0 +1,36 @@
+div   
+   h1
+      span#not-responded-num
+         | #{notResponded.length} 
+      span new
+   div#not-responded
+      - if (notResponded.length == 0) {
+      ul
+      p.empty
+         | No new ultrasounds
+      - }      
+      - else {      
+      ul
+         - each person in notResponded
+            li.not-responded
+               !=partial('person', {locals : {person : person}})                
+      - }
+
+   h1
+      span#responded-num
+         | #{responded.length} 
+      span responded
+   div#responded
+      - if (responded.length == 0) {              
+      ul
+      p.empty
+         | No ultrasounds have been responded to
+      - }      
+      - else {      
+      ul      
+         - each person in responded
+            li.responded
+               !=partial('person', {locals : {person : person}})
+      - }
+
+script(src='/js/list.js')

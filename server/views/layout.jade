@@ -1,0 +1,25 @@
+!!!
+html
+   head
+      title = 'RHoK Nepal Ultrasound'
+      link(rel='stylesheet', href='/css/hot-sneaks/jquery-ui-1.8.20.custom.css')
+      link(rel='stylesheet', href='/css/style.css')
+      link(rel='stylesheet', href='/css/jquery.lightbox-0.5.css')
+      script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js")
+      script(src='/js/jquery.lightbox-0.5.min.js')
+   body
+         ul.nav
+            li 
+               a(href='new') new
+            li 
+               a(href='responded') responded  
+            li
+               a(href='?all') all 
+         
+         div#logo
+            span RHoK Nepal Ultrasound 
+            img(src='/img/logo.png')
+
+      div#container.content
+         #content
+            != body
